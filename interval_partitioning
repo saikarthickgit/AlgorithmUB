@@ -12,3 +12,23 @@ Sort intervals by their starting times
         assign job j to that resource
      else
         allocate a new resource and assign job j to it: Sort intervals by their starting times
+
+Time complexity : n log n --> due to sorting 
+
+✅ Greedy Strategy
+
+Process jobs in order of increasing start time; assign each to the first available resource, or create a new one if needed.
+
+🔒 Safety of the Strategy
+	•	Claim: Assigning a job to the first available resource is safe — it never forces us to use more resources than necessary.
+	•	Why?
+	•	If a job starts at time t, all resources already in use at t are occupied by jobs that overlap with it.
+	•	Therefore, we must assign it to a new resource if all existing ones are busy.
+	•	If at least one resource is free, it’s always safe to put the job there, since it doesn’t overlap with jobs already on that resource.
+
+🎯 Correctness
+	•	The greedy algorithm uses exactly as many resources as the depth of the interval set (the maximum number of overlapping jobs).
+	•	Proof:
+	•	Lower bound: Any algorithm must use at least depth resources (since depth intervals overlap, and each must go to a different resource).
+	•	Upper bound: The greedy algorithm never uses more than depth resources, since it only allocates a new one when all currently running intervals overlap with the new one.
+	•	Hence, the greedy algorithm uses the minimum number of resources.
