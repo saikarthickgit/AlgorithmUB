@@ -1,0 +1,8 @@
+1: T ← {1, 2, 3, …, m}     // set of available items
+2: for i = 1 to n do
+3:     if some item in T can fit in box i then
+4:         j ← the largest item in T that can fit in box i
+5:         print("Put item j in box i")
+6:         T ← T \ {j}      // remove item j from available set
+
+Time complexity: big o(max{n,m}) 
