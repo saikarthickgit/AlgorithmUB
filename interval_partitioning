@@ -1,0 +1,14 @@
+Problem:Problem:
+	•	We have n jobs (intervals), each with a start and finish time.
+	•	Goal: Assign jobs to the minimum number of resources (machines, classrooms, etc.) so that no two overlapping jobs share the same resource.
+
+Greedy Strategy (Earliest Start Time First):
+	•	Process jobs in order of increasing start time.
+	•	Assign each job to the first available resource.
+
+Sort intervals by their starting times
+ For each job j in order:
+    if there exists a resource that is free for job j then
+        assign job j to that resource
+     else
+        allocate a new resource and assign job j to it: Sort intervals by their starting times
