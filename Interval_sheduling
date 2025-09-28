@@ -11,5 +11,7 @@ Greedy Strategy (Earliest Finish Time First):
  for j = 1 to n do
      if job j is compatible with A then
          A ← A ∪ {j}
- return A1: Sort intervals by their finishing times
+ return A1:
+
+Time complexity : n log n --> due to sorting 
 
