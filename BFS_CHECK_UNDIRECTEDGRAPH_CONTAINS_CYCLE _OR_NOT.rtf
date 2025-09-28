@@ -1,11 +1,10 @@
- \
-isCyclicUndirected_BFS(Graph G):\
-    visited = set()\
-\
-    for each vertex v in G:\
-        if v not in visited:\
+ 
+isCyclicUndirected_BFS(Graph G):
+    visited = set()
+    for each vertex v in G:
+        if v not in visited:
             if BFS(v) == true:                               // function calling\
-                return true\
+                return true
     return false\
 \
 \
