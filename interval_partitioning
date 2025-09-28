@@ -15,6 +15,8 @@ Sort intervals by their starting times
 
 Time complexity : n log n --> due to sorting 
 
+https://www.youtube.com/watch?v=i_G8hZYcKnI
+
 ✅ Greedy Strategy
 
 Process jobs in order of increasing start time; assign each to the first available resource, or create a new one if needed.
