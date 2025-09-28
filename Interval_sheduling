@@ -15,3 +15,29 @@ Greedy Strategy (Earliest Finish Time First):
 
 Time complexity : n log n --> due to sorting 
 
+
+⸻
+
+1. Interval Scheduling (Earliest Finish Time First)
+
+✅ Greedy Strategy
+
+Pick the interval that finishes earliest among those that are compatible with the already chosen set.
+
+🔒 Safety of the Strategy
+	•	Claim: There is always an optimal solution that includes the job with the earliest finishing time.
+	•	Proof (Exchange Argument):
+	•	Let I be the interval with the earliest finish time.
+	•	Take any optimal solution S.
+	•	If I \in S, we’re done.
+	•	If I \notin S, then S must contain some other job J.
+Since I finishes earlier than J, we can replace J with I without reducing the number of jobs in the solution.
+	•	Therefore, there exists an optimal solution that contains I.
+	•	✅ So the greedy choice (earliest finish) is safe.
+
+🎯 Correctness
+	•	After taking I, the remaining problem is just “schedule the maximum number of jobs among those starting after I’s finish.”
+	•	This is a smaller instance of the same problem.
+	•	By induction, the greedy algorithm always produces an optimal solution.
+
+
