@@ -1,0 +1,15 @@
+1. Interval Scheduling
+Problem:
+	•	We have n jobs (intervals), each with a start time and finish time.
+	•	Goal: Select the maximum number of non-overlapping jobs.
+
+Greedy Strategy (Earliest Finish Time First):
+	•	Always pick the interval that finishes earliest among the remaining ones.
+
+ Sort intervals by their finishing times
+ A ← ∅                  // selected intervals
+ for j = 1 to n do
+     if job j is compatible with A then
+         A ← A ∪ {j}
+ return A1: Sort intervals by their finishing times
+
