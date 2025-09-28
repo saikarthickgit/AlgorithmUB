@@ -1,0 +1,38 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww28900\viewh18080\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 isCyclicUndirected_BFS(Graph G):\
+    visited = set()      \
+isCyclicUndirected_BFS(Graph G):\
+    visited = set()\
+\
+    for each vertex v in G:\
+        if v not in visited:\
+            if BFS(v) == true:                               // function calling\
+                return true\
+    return false\
+\
+\
+BFS(start):                                                    // recursive function\
+    create queue Q\
+    enqueue (start, parent = -1)\
+    visited.add(start)\
+\
+    while Q not empty:\
+        (node, parent) = dequeue(Q)\
+\
+        for each neighbor u of node:               // checking the node  neighbor whether they are already present in the queue or not if they are present then the graph is cycle else the graph is not  cycle\
+            if u not in visited:\
+                visited.add(u)\
+                enqueue (u, node)         \
+            else if u \uc0\u8800  parent:                                 \
+                return true   # cycle found\
+\
+    return false\
+   \
+\
+}
