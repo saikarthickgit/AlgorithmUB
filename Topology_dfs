@@ -1,0 +1,22 @@
+**Topological Sort using DFS**
+
+TOPOLOGICAL-SORT-DFS(Graph G):
+    Input: Directed Acyclic Graph (DAG) G = (V, E)
+    Output: A topological ordering of vertices
+
+    1. Mark all vertices as UNVISITED
+    2. Initialize an empty stack S
+
+    3. For each vertex u in V:
+           If u is UNVISITED:
+                DFS(u)
+
+    4. Return the stack S (popped order gives topological sort)
+
+DFS(u):
+    1. Mark u as VISITED
+    2. For each neighbor v of u:
+           If v is UNVISITED:
+                DFS(v)
+    3. PUSH u onto stack S
+```
